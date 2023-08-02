@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 
 const App = () => {
@@ -6,7 +6,5 @@ const App = () => {
     <h1>Hello world</h1>
   );
 };
-
-export default App;
 
 export default App;
