@@ -6,12 +6,16 @@ import AddPost from './components/pages/AddPosts';
 import EditPost from './components/pages/EditPosts';
 import About from './components/pages/About';
 import NotFound from './components/pages/NotFound';
+import Header from './components/views/Header';
+import Footer from './components/views/Footer';
+import { Container } from 'react-bootstrap';
 
 
 
 const App = () => {
   return (
-    <main>
+    <Container>
+      <Header />
       <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/post/:postId" element={<SinglePost />} />
@@ -20,7 +24,8 @@ const App = () => {
           <Route path="/about" element={<About />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
-    </main>  
+        <Footer />
+      </Container>
   );
 };
 
