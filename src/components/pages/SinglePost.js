@@ -51,9 +51,9 @@ const SinglePost = () => {
         </Row>
         <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
-            <Modal.Title> Are you sure you want to do that? </Modal.Title>
+            <Modal.Title> Are you sure? </Modal.Title>
         </Modal.Header>
-        <Modal.Body> Are you absolutely certain you want to proceed with this action? <br /> Once completed, this post will be permanently erased from the app! </Modal.Body>
+        <Modal.Body> This operation will completely remove this post from the app.<br /> Are you sure you want to do that? </Modal.Body>
         <Modal.Footer>
             <Button id="cancel-button" variant="secondary" onClick={handleClose}> Cancel </Button>
             <Button id="remove-button" variant="danger" onClick={handleRemove}> Remove </Button>
