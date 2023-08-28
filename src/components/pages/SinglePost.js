@@ -1,11 +1,15 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { getPostById } from "../../redux/postsRedux";
+import { getPostById, removePost } from "../../redux/postsRedux";
 import { useParams } from "react-router-dom";
 import { Card, Col, Row, Button } from "react-bootstrap";
-import { NavLink } from "react-router-dom";
+import { NavLink, Navigate } from "react-router-dom";
 import { useState } from "react";
 import { Modal } from "react-bootstrap";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
+import dateToStr from "../../utils/dateToStr";
+
 
 const SinglePost = () => {
 
@@ -41,12 +45,10 @@ const SinglePost = () => {
                         </div>
                         <div>
                             <span className="fw-bold"> Published: </span>
-                            <span>{postData.publishedDate}</span>
+                            <span>{dateToStr(new Date(postData.publishedDate))}</span>
                         </div>
                     </div>
-                    <article>
-                        {postData.content}
-                    </article>
+                    <article dangerouslySetInnerHTML={{ __html: postData.content}}></article>
             </Col>
         </Row>
         <Modal show={show} onHide={handleClose}>

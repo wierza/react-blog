@@ -3,6 +3,7 @@ import { useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
 import { getAllPosts } from "../../redux/postsRedux";
 import { Card, Col, Row, Button } from "react-bootstrap";
+import dateToStr from "../../utils/dateToStr";
 
 const Posts = () => {
     const posts = useSelector(getAllPosts);
@@ -19,7 +20,7 @@ const Posts = () => {
                             </div>
                             <div>
                                 <span className='fw-bold'> Published: </span>
-                                <span>{post.publishedDate}</span>
+                                <span>{dateToStr(new Date(post.publishedDate))}</span>
                             </div>
                             <Card.Text className='mt-2'>{post.shortDescription}</Card.Text>
                             <Button variant='primary' as={NavLink} to={`/post/${post.id}`}>
