@@ -47,6 +47,10 @@ const SinglePost = () => {
                             <span className="fw-bold"> Published: </span>
                             <span>{dateToStr(new Date(postData.publishedDate))}</span>
                         </div>
+                        <div>
+                        <span className="fw-bold"> Category: </span>
+                        <span>{postData.category}</span>
+                        </div>
                     </div>
                     <article dangerouslySetInnerHTML={{ __html: postData.content}}></article>
             </Col>
