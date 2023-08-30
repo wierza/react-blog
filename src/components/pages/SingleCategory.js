@@ -12,7 +12,7 @@ const SingleCategory = () => {
   if (!categoriesData) return <Navigate to="/categories/" />;
   return (
     <Row className="justify-content-between">
-      <Posts posts={category} />
+      <Posts posts={categoriesData} />
     </Row>
   );
 };

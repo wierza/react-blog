@@ -1,12 +1,15 @@
-import React from "react";
-import { useSelector } from "react-redux";
-import { NavLink } from "react-router-dom";
-import { getAllPosts } from "../../redux/postsRedux";
-import { Card, Col, Row, Button } from "react-bootstrap";
-import dateToStr from "../../utils/dateToStr";
+import React from 'react';
+import { useSelector } from 'react-redux';
+import { NavLink } from 'react-router-dom';
+import { getAllPosts } from '../../redux/postsRedux';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import Card from 'react-bootstrap/Card';
+import Button from 'react-bootstrap/Button';
+import dateToStr from '../../utils/dateToStr';
 
-const Posts = () => {
-    const posts = useSelector(getAllPosts);
+const Posts = ({posts}) => {
+    
     return (
         <Row className='py-4'>
             {posts.map((post) => (
@@ -38,4 +41,4 @@ const Posts = () => {
     )
 };
 
-export default Posts;
+export default Posts; 
