@@ -9,7 +9,7 @@ import About from './components/pages/About';
 import NotFound from './components/pages/NotFound';
 import Header from './components/views/Header';
 import Footer from './components/views/Footer';
-import SingleCategory from './components/pages/SinglePost';
+import SingleCategory from './components/pages/SingleCategory';
 import { Container } from 'react-bootstrap';
 
 
